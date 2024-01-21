@@ -1,0 +1,22 @@
+@import '@styles/variables.scss';
+
+.button {
+  border-radius: $br-10;
+  border: none;
+  padding: 7px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $white;
+  text-transform: capitalize;
+  background-color: transparent;
+  transition: $transition-duration;
+  text-wrap: nowrap;
+
+  &--active {
+    background-color: $grey;
+  }
+
+  &:not(.button--active):hover {
+    background-color: rgba($grey, 0.3);
+  }
+}

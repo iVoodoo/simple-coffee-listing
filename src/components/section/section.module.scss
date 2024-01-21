@@ -1,0 +1,19 @@
+@import '@styles/variables.scss';
+
+.section {
+  width: clamp(300px, 85.93vw, $container-width);
+  margin-top: - calc($header-height * 0.4);
+  margin-inline: auto;
+  background-color: $dark-alternate;
+  border-radius: $br-10;
+  padding-block: 70px;
+  padding-inline: 80px;
+
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-inline: 50px;
+  }
+}

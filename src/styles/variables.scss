@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+$dark: #111315;
+$dark-alternate: #1b1d1f;
+$grey: #6f757c;
+$white: #fef7ee;
+$pale-green: #bee3cc;
+$yellow: #f6c768;
+$red: #ed735d;
+
+$transition-duration: 0.2s;
+
+$font-dm-sans: 'DM Sans', sans-serif;
+
+$container-width: 1160px;
+$container-padding-x: 30px;
+$header-height: 350px;
+
+$br-10: 10px;
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

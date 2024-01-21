@@ -1,0 +1,64 @@
+@import '@styles/variables.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  &__title {
+    text-align: center;
+    position: relative;
+    z-index: 100;
+
+    &::after {
+      content: '';
+      z-index: -100;
+      left: 100%;
+      translate: -50% -50%;
+      position: absolute;
+      width: 200px;
+      aspect-ratio: 1;
+      background: url('@assets/icons/vector.svg') center/ contain no-repeat;
+    }
+  }
+  &__description {
+    z-index: 100;
+    font-weight: 600;
+    text-align: center;
+    max-width: 500px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+  }
+}
+
+.coffee {
+  margin-inline: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1280px) {
+  .coffee {
+    grid-template-columns: repeat(2, 260px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 30px;
+  }
+  .coffee {
+    grid-template-columns: 260px;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,80 @@
+@import '@styles/variables.scss';
+
+.card {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &__detail {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 5px;
+    align-items: center;
+  }
+}
+
+.image {
+  width: 100%;
+  position: relative;
+  &__source {
+    border-radius: $br-10;
+  }
+  &__tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 30px;
+    text-transform: capitalize;
+    background-color: $yellow;
+    color: $dark-alternate;
+  }
+}
+
+.detail {
+  &__title {
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+
+  &__price {
+    justify-self: end;
+    padding: 3px 5px;
+    background-color: $pale-green;
+    border-radius: $br-10;
+    color: $dark-alternate;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 5px;
+  }
+
+  &__available {
+    color: $red;
+  }
+}
+
+.rating {
+  &__icon {
+    display: flex;
+    align-items: center;
+    width: 24px;
+
+    &--fill {
+      @extend .rating__icon;
+      color: $yellow;
+    }
+  }
+
+  &__number {
+    color: $white;
+  }
+}

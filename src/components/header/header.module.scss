@@ -1,0 +1,10 @@
+@import '@styles/variables.scss';
+
+.header {
+  height: 350px;
+  background: url('@assets/images/bg-cafe.jpg') center/cover no-repeat;
+
+  &__title {
+    @include visually-hidden;
+  }
+}
